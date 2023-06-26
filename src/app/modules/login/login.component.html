@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="login">
+    <div class="header">
+      <h3>Olá Seja Bem Vindo</h3>
+      <h4>Efetue seu login</h4>
+    </div>
+    <div class="form">
+      <form>
+        <label for="email">E-mail</label>
+        <input
+          [(ngModel)]="emailInput"
+          type="email"
+          name="email"
+          (blur)="ValidEmail(emailInput)"
+          placeholder="insira seu E-mail"
+          autofocus
+          required
+        />
+        <label for="password">Senha</label>
+        <input
+          [(ngModel)]="passwordValid"
+          type="password"
+          name="Senha"
+          (blur)="ValidPassword(passwordValid)"
+          placeholder="Insira sua Senha"
+          required
+        />
+      </form>
+    </div>
+    <div class="bottom">
+      <button type="button" class="btn" (click)="OpenForm()">Entrar</button>
+      <a href="/">Esqueceu a senha?</a>
+      <!-- <a href="/src/app/modules/form-user/form-user-routing.module.ts"
+        >Não possui uma conta? Cadastre-se Aqui</a
+      > -->
+    </div>
+  </div>
+</div>
+
+<p-toast
+  [showTransformOptions]="'translateY(100%)'"
+  [showTransitionOptions]="'1000ms'"
+  [hideTransitionOptions]="'1000ms'"
+  [showTransformOptions]="'translateX(100%)'"
+></p-toast>
