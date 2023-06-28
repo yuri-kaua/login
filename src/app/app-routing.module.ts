@@ -7,7 +7,6 @@ import { FormUserComponent } from './modules/form-user/form-user.component';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: LoginComponent,
   },
   {
@@ -18,12 +17,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: '',
-    pathMatch: 'full',
-    component: FormUserComponent,
-  },
-  {
-    path: 'form-user',
+    path: 'formUser',
     loadChildren: () =>
       import('./modules/form-user/form-user-routing.module').then(
         (m) => m.FormUserRoutingModule

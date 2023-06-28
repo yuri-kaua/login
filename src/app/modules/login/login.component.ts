@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,16 +11,8 @@ export class LoginComponent implements OnInit {
   emailInput: string = '';
   passwordValid: string = '';
 
-  constructor(private messageService: MessageService) {}
-  ngOnInit(): void {
-    if (this.emailInput.length < 1) {
-      this.messageService.add({
-        severity: 'error',
-        summary: 'error',
-        detail: 'Campo obrigátorio não foi preenchido ',
-      });
-    }
-  }
+  constructor(private messageService: MessageService, private route: Router) {}
+  ngOnInit(): void {}
 
   ValidEmail(email: string) {
     const regexEmail =
@@ -27,21 +20,21 @@ export class LoginComponent implements OnInit {
 
     const emailInput = regexEmail.test(this.emailInput);
 
+    if (this.emailInput === '') {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'error',
+        detail: 'Campo orbigatório não preenchido',
+      });
+    }
+
     // if (this.emailInput) {
     //   this.messageService.add({
     //     severity: 'success',
     //     summary: 'success',
-    //     detail: 'Sucesso',
+    //     detail: 'Email confirmado',
     //   });
     // }
-
-    if (this.emailInput === undefined) {
-      this.messageService.add({
-        severity: 'error',
-        summary: 'error',
-        detail: 'Coloque um E-mail válido',
-      });
-    }
   }
 
   ValidPassword(senha: string) {
@@ -67,5 +60,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  OpenForm() {}
+  register() {
+    this.route.navigate(['formUser']);
+    console.log('teste');
+  }
 }

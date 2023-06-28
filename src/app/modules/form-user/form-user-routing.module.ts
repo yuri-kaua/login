@@ -5,7 +5,6 @@ import { FormUserComponent } from './form-user.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'form-user',
     component: FormUserComponent,
   },
 ];
