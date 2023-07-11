@@ -8,7 +8,6 @@
       <form>
         <label for="email">E-mail</label>
         <input
-          [(ngModel)]="emailInput"
           type="email"
           name="email"
           (blur)="ValidEmail(emailInput)"
@@ -18,7 +17,6 @@
         />
         <label for="password">Senha</label>
         <input
-          [(ngModel)]="passwordValid"
           type="password"
           name="Senha"
           (blur)="ValidPassword(passwordValid)"
@@ -28,9 +26,9 @@
       </form>
     </div>
     <div class="bottom">
-      <button class="btn">Entrar</button>
+      <button class="btn" (click)="openLogin()">Entrar</button>
       <a>Esqueceu a senha?</a>
-      <a (click)="register()"> Cadastre-se Aqui</a>
+      <a style="cursor: pointer" (click)="register()"> Cadastre-se Aqui</a>
     </div>
   </div>
 </div>

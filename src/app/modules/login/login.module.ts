@@ -8,6 +8,7 @@ import { StepsModule } from 'primeng/steps';
 import { FormsModule } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -18,6 +19,7 @@ import { CardModule } from 'primeng/card';
     FormsModule,
     ToastModule,
     CardModule,
+    CarouselModule,
   ],
 })
 export class LoginModule {}

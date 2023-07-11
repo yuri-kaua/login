@@ -19,45 +19,48 @@ export class LoginComponent implements OnInit {
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const emailInput = regexEmail.test(this.emailInput);
-
-    if (this.emailInput === '') {
-      this.messageService.add({
-        severity: 'error',
-        summary: 'error',
-        detail: 'Campo orbigatório não preenchido',
-      });
-    }
-
-    // if (this.emailInput) {
-    //   this.messageService.add({
-    //     severity: 'success',
-    //     summary: 'success',
-    //     detail: 'Email confirmado',
-    //   });
-    // }
   }
 
   ValidPassword(senha: string) {
     const regex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
 
     const passwordValid = regex.test(this.passwordValid);
+  }
 
-    console.log(passwordValid);
-
-    if (this.passwordValid.length < 6) {
+  openLogin() {
+    if (this.emailInput === '' || this.emailInput === undefined) {
       this.messageService.add({
         severity: 'error',
         summary: 'error',
-        detail: 'Senha deve conter pelo menos 6 digitos',
+        detail: 'Campo orbigatório não preenchido',
       });
     }
-    if (this.passwordValid.length > 5) {
+    if (this.emailInput) {
       this.messageService.add({
         severity: 'success',
         summary: 'success',
-        detail: 'Sucesso',
+        detail: 'Email confirmado',
       });
     }
+
+    // validação de email com regex
+
+    // if (this.passwordValid.length < 6) {
+    //   this.messageService.add({
+    //     severity: 'error',
+    //     summary: 'error',
+    //     detail: 'Senha deve conter pelo menos 6 digitos',
+    //   });
+    // }
+    // if (this.passwordValid.length > 5) {
+    //   this.messageService.add({
+    //     severity: 'success',
+    //     summary: 'success',
+    //     detail: 'Senha confirmada com sucesso',
+    //   });
+    // }
+
+    //validação de senha com regex
   }
 
   register() {

@@ -40,7 +40,7 @@
   }
   label {
     display: flex;
-    justify-content: center;
+    justify-content: start;
   }
 }
 input:invalid {
@@ -60,7 +60,6 @@ input:invalid {
     width: 10rem;
     height: 25px;
     border-radius: 20px;
-
     border: none;
   }
 

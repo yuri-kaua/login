@@ -1,52 +1,66 @@
 <div class="container">
-  <div class="form-user">
+  <form class="formulario">
     <div class="header">
       <h3>Vamos Começar</h3>
       <h4>Faça seu cadastro</h4>
     </div>
-    <form class="formgroup">
-      <label>Nome</label>
-      <input
-        type="text"
-        name="Nome"
-        placeholder="Insira seu nome"
-        autofocus
-        required
-      />
-      <label>E-mail</label>
-      <input
-        type="email"
-        name="email"
-        placeholder="insira seu E-mail"
-        autofocus
-        required
-      />
-      <label>Data de nascimento </label>
-      <input
-        type="date"
-        name="Nome"
-        placeholder="insira sua data de nascimento"
-        autofocus
-        required
-      />
-      <label>Telefone</label>
-      <input type="tel" name="Telefone" autofocus required />
-      <label>Senha</label>
-      <input
-        type="password"
-        name="password"
-        placeholder="insira um senha"
-        autofocus
-        required
-      />
-      <label>Confirmar Senha</label>
-      <input
-        type="password"
-        name="password"
-        placeholder="Confirmar senha"
-        autofocus
-        required
-      />
-    </form>
-  </div>
+    <div class="form-group">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-user"></i>
+        </span>
+        <input
+          pInputText
+          placeholder="Nome do usuario"
+          formControlName="name"
+          autofocus
+        />
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-file-edit"></i>
+        </span>
+        <input pInputText placeholder="E-mail" formControlName="email" />
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-eye-slash"></i>
+        </span>
+        <input pInputText placeholder="CPF" formControlName="cpf" />
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-phone"></i>
+        </span>
+        <input pInputText placeholder="Telefone" formControlName="fone" />
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-calendar"></i>
+        </span>
+        <input
+          type="datetime"
+          pInputText
+          placeholder="Data de nascimento"
+          formControlName="data_nascimento"
+        />
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-eye"></i>
+        </span>
+        <input pInputText placeholder="Senha" formControlName="password" />
+      </div>
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+          <i class="pi pi-eye"></i>
+        </span>
+        <input
+          pInputText
+          placeholder="Confirmar senha"
+          formControlName="conf_password"
+        />
+      </div>
+    </div>
+  </form>
 </div>
