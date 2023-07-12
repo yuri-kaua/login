@@ -7,7 +7,6 @@ import { FormUserRoutingModule } from './form-user-routing.module';
 import { FormUserComponent } from './form-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
-import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [FormUserComponent],
@@ -17,7 +16,6 @@ import { CardModule } from 'primeng/card';
     FormsModule,
     InputTextModule,
     ReactiveFormsModule,
-    CardModule,
     BrowserModule,
     BrowserAnimationsModule,
   ],

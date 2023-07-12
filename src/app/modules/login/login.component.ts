@@ -28,43 +28,29 @@ export class LoginComponent implements OnInit {
   }
 
   openLogin() {
-    if (this.emailInput === '' || this.emailInput === undefined) {
+    if (this.passwordValid.length < 6) {
       this.messageService.add({
         severity: 'error',
         summary: 'error',
-        detail: 'Campo orbigatório não preenchido',
+        detail: 'Senha deve conter pelo menos 6 digitos',
       });
     }
-    if (this.emailInput) {
+    if (this.passwordValid.length > 5) {
       this.messageService.add({
         severity: 'success',
         summary: 'success',
-        detail: 'Email confirmado',
+        detail: 'Senha confirmada com sucesso',
       });
     }
-
-    // validação de email com regex
-
-    // if (this.passwordValid.length < 6) {
-    //   this.messageService.add({
-    //     severity: 'error',
-    //     summary: 'error',
-    //     detail: 'Senha deve conter pelo menos 6 digitos',
-    //   });
-    // }
-    // if (this.passwordValid.length > 5) {
-    //   this.messageService.add({
-    //     severity: 'success',
-    //     summary: 'success',
-    //     detail: 'Senha confirmada com sucesso',
-    //   });
-    // }
-
-    //validação de senha com regex
   }
 
   register() {
     this.route.navigate(['formUser']);
     console.log('teste');
+  }
+
+  forgotPass() {
+    this.route.navigate(['recoverPassword']);
+    console.log('teste2');
   }
 }
