@@ -4,16 +4,16 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient();
 }
-.formulario {
+:host ::ng-deep .p-card-content {
+  width: 400px;
+  height: 600px;
   display: flex;
-  width: 30vw;
-  height: 90vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 1rem;
 
   img {
     display: flex;
@@ -29,10 +29,6 @@
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
   input {
     width: 100%;
     display: flex;
@@ -41,5 +37,26 @@
     font-size: 15px;
     border-radius: 10px;
     outline: none;
+  }
+}
+
+.btn {
+  background-image: linear-gradient(aqua, rgb(10, 121, 248));
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  width: 10rem;
+  height: 25px;
+  border-radius: 20px;
+  border: none;
+  margin: 0 auto;
+
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: rgb(16, 187, 187);
+    border: 1.5px solid black;
   }
 }

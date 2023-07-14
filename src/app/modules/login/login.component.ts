@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   emailInput: string = '';
   passwordValid: string = '';
+  visible: boolean = false;
 
   constructor(private messageService: MessageService, private route: Router) {}
   ngOnInit(): void {}
@@ -50,7 +51,6 @@ export class LoginComponent implements OnInit {
   }
 
   forgotPass() {
-    this.route.navigate(['recoverPassword']);
-    console.log('teste2');
+    this.visible = true;
   }
 }

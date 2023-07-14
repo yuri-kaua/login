@@ -12,15 +12,13 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('./modules/login/login-routing.module').then(
-        (m) => m.LoginRoutingModule
-      ),
+      import('./modules/login/login.module').then((m) => m.LoginModule),
   },
   {
     path: 'formUser',
     loadChildren: () =>
-      import('./modules/form-user/form-user-routing.module').then(
-        (m) => m.FormUserRoutingModule
+      import('./modules/form-user/form-user.module').then(
+        (m) => m.FormUserModule
       ),
   },
 ];

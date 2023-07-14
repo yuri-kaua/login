@@ -54,5 +54,5 @@ export class FormUserComponent implements OnInit {
     return regexEmail;
   }
 
-  validarPassword(checkPassword: string) {}
+  showCadastro() {}
 }

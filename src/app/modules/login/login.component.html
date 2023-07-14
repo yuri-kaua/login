@@ -21,12 +21,14 @@
   <span></span>
 </div>
 <div class="container">
-  <div class="login">
+  <p-card header="Olá Seja Bem Vindo">
     <div class="header">
       <h3>Olá Seja Bem Vindo</h3>
-      <h4>Efetue seu login</h4>
     </div>
     <div class="form">
+      <div class="msg">
+        <h4>Efetue seu login</h4>
+      </div>
       <form>
         <label for="email">E-mail</label>
         <input
@@ -52,8 +54,18 @@
       <a style="cursor: pointer" (click)="forgotPass()">Esqueceu a senha?</a>
       <a style="cursor: pointer" (click)="register()"> Cadastre-se Aqui</a>
     </div>
-  </div>
+  </p-card>
 </div>
+
+<p-dialog header="Recupere sua Senha" [(visible)]="visible" [modal]="true">
+  <img
+    src="../../../assets/img/undraw_forgot_password_re_hxwm.svg"
+    alt=""
+    class="img"
+  />
+  <p>Insira seu email para poder mudar sua Senha</p>
+  <input class="emailinput" type="text" placeholder="seu E-mail" />
+</p-dialog>
 
 <p-toast
   [showTransformOptions]="'translateY(100%)'"
