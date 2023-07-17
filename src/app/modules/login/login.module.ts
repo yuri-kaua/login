@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
@@ -18,6 +19,7 @@ import { DialogModule } from 'primeng/dialog';
     ToastModule,
     CardModule,
     DialogModule,
+    ReactiveFormsModule,
   ],
 })
 export class LoginModule {}
